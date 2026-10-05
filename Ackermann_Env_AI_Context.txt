@@ -1,0 +1,338 @@
+# KONTEKS DIAGRAM SIMULINK: Ackermann_Env
+
+## 1. DAFTAR BLOK & TIPE
+- **Nama**: Demux | **Tipe**: Demux | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: MATLAB Function | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: v | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: delta | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: x | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: y | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: theta | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: slip_factor | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**:  Demux  | **Tipe**: Demux | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**:  SFunction  | **Tipe**: S-Function | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**:  Terminator  | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: x_next | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: y_next | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: theta_next | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function
+- **Nama**: MATLAB Function1 | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: x | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**: y | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**: theta | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**: pathXY | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**: idx_prev | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**:  Demux  | **Tipe**: Demux | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**:  SFunction  | **Tipe**: S-Function | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**:  Terminator  | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**: obs | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**: idx_now | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function1
+- **Nama**: MATLAB Function2 | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: x | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: y | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: obs | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: heading_err_prev | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: dist_to_end_prev | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: pathXY | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: idx_now | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**:  Demux  | **Tipe**: Demux | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**:  SFunction  | **Tipe**: S-Function | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**:  Terminator  | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: reward | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: dist_to_end | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: debug | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function2
+- **Nama**: MATLAB Function3 | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: x | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function3
+- **Nama**: y | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function3
+- **Nama**: pathXY | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function3
+- **Nama**:  Demux  | **Tipe**: Demux | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function3
+- **Nama**:  SFunction  | **Tipe**: S-Function | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function3
+- **Nama**:  Terminator  | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function3
+- **Nama**: isdone | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/MATLAB Function3
+- **Nama**: RL Agent | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: observation | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: reward | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: isdone | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: Evaluate Policy | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: observation | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy
+- **Nama**: use_external_action | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy
+- **Nama**: external_action | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy
+- **Nama**: stopsim | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy
+- **Nama**: Execute Policy | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy
+- **Nama**: observation | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: use_external_action | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: external_action | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: stopsim | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: Compare To Constant | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: u | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Compare To Constant
+- **Nama**: Compare | **Tipe**: RelationalOperator | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Compare To Constant
+- **Nama**: Constant | **Tipe**: Constant | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Compare To Constant
+- **Nama**: y | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Compare To Constant
+- **Nama**: Enabled Policy Evaluator | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: observation | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Enabled Policy Evaluator
+- **Nama**: Enable | **Tipe**: EnablePort | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Enabled Policy Evaluator
+- **Nama**: Policy Evaluator | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Enabled Policy Evaluator
+- **Nama**: observation | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Enabled Policy Evaluator/Policy Evaluator
+- **Nama**: Policy Process Experience Internal | **Tipe**: MATLABSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Enabled Policy Evaluator/Policy Evaluator
+- **Nama**: action | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Enabled Policy Evaluator/Policy Evaluator
+- **Nama**: action | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy/Enabled Policy Evaluator
+- **Nama**: Terminator | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: Terminator1 | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: action | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy/Execute Policy
+- **Nama**: action | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Evaluate Policy
+- **Nama**: Process Experience | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: observation | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Process Experience
+- **Nama**: last_observation | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Process Experience
+- **Nama**: last_action | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Process Experience
+- **Nama**: reward | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Process Experience
+- **Nama**: isdone | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Process Experience
+- **Nama**: Policy Process Experience Internal | **Tipe**: MATLABSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Process Experience
+- **Nama**: stopsim | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/Process Experience
+- **Nama**: Stop Simulation | **Tipe**: Stop | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: accumulate_reward | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: reward | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward
+- **Nama**: Constant | **Tipe**: Constant | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward
+- **Nama**: Unit Delay | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward
+- **Nama**: cumsum | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward
+- **Nama**: rwd | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward/cumsum
+- **Nama**: Enable | **Tipe**: EnablePort | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward/cumsum
+- **Nama**: Sum | **Tipe**: Sum | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward/cumsum
+- **Nama**: Unit Delay | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward/cumsum
+- **Nama**: cumulative_rwd | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward/cumsum
+- **Nama**: cumulative_reward | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/accumulate_reward
+- **Nama**: act_delayable | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: u | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable
+- **Nama**: y_fb | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable
+- **Nama**: y=unit_delay(y_fb) | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable
+- **Nama**: u | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable/y=unit_delay(y_fb)
+- **Nama**: y_fb | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable/y=unit_delay(y_fb)
+- **Nama**: Memory | **Tipe**: Memory | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable/y=unit_delay(y_fb)
+- **Nama**: Terminator | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable/y=unit_delay(y_fb)
+- **Nama**: y | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable/y=unit_delay(y_fb)
+- **Nama**: y | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/act_delayable
+- **Nama**: cumulative reward | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: external action | **Tipe**: Constant | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: last action | **Tipe**: Ground | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: last observation | **Tipe**: Ground | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: obs_delayable | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: u | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable
+- **Nama**: y_fb | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable
+- **Nama**: y=unit_delay(y_fb) | **Tipe**: SubSystem | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable
+- **Nama**: u | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable/y=unit_delay(y_fb)
+- **Nama**: y_fb | **Tipe**: Inport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable/y=unit_delay(y_fb)
+- **Nama**: Memory | **Tipe**: Memory | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable/y=unit_delay(y_fb)
+- **Nama**: Terminator | **Tipe**: Terminator | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable/y=unit_delay(y_fb)
+- **Nama**: y | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable/y=unit_delay(y_fb)
+- **Nama**: y | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent/obs_delayable
+- **Nama**: use external action | **Tipe**: Constant | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: action | **Tipe**: Outport | **Hierarki/Lokasi**: Ackermann_Env/RL Agent
+- **Nama**: Rate Limiter | **Tipe**: RateLimiter | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: Selector | **Tipe**: Selector | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: To Workspace | **Tipe**: ToWorkspace | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: Unit Delay | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: Unit Delay1 | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: Unit Delay2 | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: Unit Delay3 | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: Unit Delay4 | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: Unit Delay5 | **Tipe**: UnitDelay | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: XY Graph | **Tipe**: Record | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: out.delta | **Tipe**: ToWorkspace | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: out.v | **Tipe**: ToWorkspace | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: out.x | **Tipe**: ToWorkspace | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: out.y | **Tipe**: ToWorkspace | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: pathXY | **Tipe**: Constant | **Hierarki/Lokasi**: Ackermann_Env
+- **Nama**: slip_factor | **Tipe**: Constant | **Hierarki/Lokasi**: Ackermann_Env
+
+## 2. KONEKSI ANTAR BLOK (ALIRAN SINYAL)
+- [ SFunction ] (Port Out 1) ----> ke ----> [ Demux ]
+- [ Demux ] (Port Out 1) ----> ke ----> [ Terminator ]
+- [ SFunction ] (Port Out 4) ----> ke ----> [theta_next]
+- [ SFunction ] (Port Out 3) ----> ke ----> [y_next]
+- [ SFunction ] (Port Out 2) ----> ke ----> [x_next]
+- [slip_factor] (Port Out 1) ----> ke ----> [ SFunction ]
+- [theta] (Port Out 1) ----> ke ----> [ SFunction ]
+- [y] (Port Out 1) ----> ke ----> [ SFunction ]
+- [x] (Port Out 1) ----> ke ----> [ SFunction ]
+- [delta] (Port Out 1) ----> ke ----> [ SFunction ]
+- [v] (Port Out 1) ----> ke ----> [ SFunction ]
+- [ SFunction ] (Port Out 1) ----> ke ----> [ Demux ]
+- [ Demux ] (Port Out 1) ----> ke ----> [ Terminator ]
+- [ SFunction ] (Port Out 3) ----> ke ----> [idx_now]
+- [ SFunction ] (Port Out 2) ----> ke ----> [obs]
+- [idx_prev] (Port Out 1) ----> ke ----> [ SFunction ]
+- [pathXY] (Port Out 1) ----> ke ----> [ SFunction ]
+- [theta] (Port Out 1) ----> ke ----> [ SFunction ]
+- [y] (Port Out 1) ----> ke ----> [ SFunction ]
+- [x] (Port Out 1) ----> ke ----> [ SFunction ]
+- [ SFunction ] (Port Out 1) ----> ke ----> [ Demux ]
+- [ Demux ] (Port Out 1) ----> ke ----> [ Terminator ]
+- [ SFunction ] (Port Out 4) ----> ke ----> [debug]
+- [ SFunction ] (Port Out 3) ----> ke ----> [dist_to_end]
+- [ SFunction ] (Port Out 2) ----> ke ----> [reward]
+- [idx_now] (Port Out 1) ----> ke ----> [ SFunction ]
+- [pathXY] (Port Out 1) ----> ke ----> [ SFunction ]
+- [dist_to_end_prev] (Port Out 1) ----> ke ----> [ SFunction ]
+- [heading_err_prev] (Port Out 1) ----> ke ----> [ SFunction ]
+- [obs] (Port Out 1) ----> ke ----> [ SFunction ]
+- [y] (Port Out 1) ----> ke ----> [ SFunction ]
+- [x] (Port Out 1) ----> ke ----> [ SFunction ]
+- [ SFunction ] (Port Out 1) ----> ke ----> [ Demux ]
+- [ Demux ] (Port Out 1) ----> ke ----> [ Terminator ]
+- [ SFunction ] (Port Out 2) ----> ke ----> [isdone]
+- [pathXY] (Port Out 1) ----> ke ----> [ SFunction ]
+- [y] (Port Out 1) ----> ke ----> [ SFunction ]
+- [x] (Port Out 1) ----> ke ----> [ SFunction ]
+- [Compare] (Port Out 1) ----> ke ----> [y]
+- [Constant] (Port Out 1) ----> ke ----> [Compare]
+- [u] (Port Out 1) ----> ke ----> [Compare]
+- [Policy Process Experience Internal] (Port Out 1) ----> ke ----> [action]
+- [observation] (Port Out 1) ----> ke ----> [Policy Process Experience Internal]
+- [observation] (Port Out 1) ----> ke ----> [Policy Evaluator]
+- [Policy Evaluator] (Port Out 1) ----> ke ----> [action]
+- [use_external_action] (Port Out 1) ----> ke ----> [Terminator]
+- [external_action] (Port Out 1) ----> ke ----> [Terminator1]
+- [observation] (Port Out 1) ----> ke ----> [Enabled Policy Evaluator]
+- [Enabled Policy Evaluator] (Port Out 1) ----> ke ----> [action]
+- [stopsim] (Port Out 1) ----> ke ----> [Compare To Constant]
+- [Compare To Constant] (Port Out 1) ----> ke ----> [Enabled Policy Evaluator]
+- [observation] (Port Out 1) ----> ke ----> [Policy Process Experience Internal]
+- [last_observation] (Port Out 1) ----> ke ----> [Policy Process Experience Internal]
+- [last_action] (Port Out 1) ----> ke ----> [Policy Process Experience Internal]
+- [reward] (Port Out 1) ----> ke ----> [Policy Process Experience Internal]
+- [isdone] (Port Out 1) ----> ke ----> [Policy Process Experience Internal]
+- [Policy Process Experience Internal] (Port Out 1) ----> ke ----> [stopsim]
+- [rwd] (Port Out 1) ----> ke ----> [Sum]
+- [Sum] (Port Out 1) ----> ke ----> [Unit Delay]
+- [Sum] (Port Out 1) ----> ke ----> [cumulative_rwd]
+- [Sum] (Port Out 1) ----> ke ----> [cumulative_rwd]
+- [Sum] (Port Out 1) ----> ke ----> [Unit Delay]
+- [Unit Delay] (Port Out 1) ----> ke ----> [Sum]
+- [cumsum] (Port Out 1) ----> ke ----> [cumulative_reward]
+- [Unit Delay] (Port Out 1) ----> ke ----> [cumsum]
+- [Constant] (Port Out 1) ----> ke ----> [Unit Delay]
+- [reward] (Port Out 1) ----> ke ----> [cumsum]
+- [u] (Port Out 1) ----> ke ----> [Terminator]
+- [y_fb] (Port Out 1) ----> ke ----> [Memory]
+- [Memory] (Port Out 1) ----> ke ----> [y]
+- [u] (Port Out 1) ----> ke ----> [Terminator]
+- [y_fb] (Port Out 1) ----> ke ----> [Memory]
+- [Memory] (Port Out 1) ----> ke ----> [y]
+- [accumulate_reward] (Port Out 1) ----> ke ----> [cumulative reward]
+- [reward] (Port Out 1) ----> ke ----> [Process Experience]
+- [reward] (Port Out 1) ----> ke ----> [accumulate_reward]
+- [reward] (Port Out 1) ----> ke ----> [accumulate_reward]
+- [reward] (Port Out 1) ----> ke ----> [Process Experience]
+- [isdone] (Port Out 1) ----> ke ----> [Process Experience]
+- [act_delayable] (Port Out 1) ----> ke ----> [Process Experience]
+- [obs_delayable] (Port Out 1) ----> ke ----> [Process Experience]
+- [observation] (Port Out 1) ----> ke ----> [Process Experience]
+- [observation] (Port Out 1) ----> ke ----> [Evaluate Policy]
+- [observation] (Port Out 1) ----> ke ----> [obs_delayable]
+- [observation] (Port Out 1) ----> ke ----> [obs_delayable]
+- [observation] (Port Out 1) ----> ke ----> [Evaluate Policy]
+- [observation] (Port Out 1) ----> ke ----> [obs_delayable]
+- [observation] (Port Out 1) ----> ke ----> [Evaluate Policy]
+- [observation] (Port Out 1) ----> ke ----> [Process Experience]
+- [last observation] (Port Out 1) ----> ke ----> [obs_delayable]
+- [last action] (Port Out 1) ----> ke ----> [act_delayable]
+- [Evaluate Policy] (Port Out 1) ----> ke ----> [act_delayable]
+- [Evaluate Policy] (Port Out 1) ----> ke ----> [action]
+- [Evaluate Policy] (Port Out 1) ----> ke ----> [action]
+- [Evaluate Policy] (Port Out 1) ----> ke ----> [act_delayable]
+- [Process Experience] (Port Out 1) ----> ke ----> [Evaluate Policy]
+- [Process Experience] (Port Out 1) ----> ke ----> [Stop Simulation]
+- [Process Experience] (Port Out 1) ----> ke ----> [Stop Simulation]
+- [Process Experience] (Port Out 1) ----> ke ----> [Evaluate Policy]
+- [use external action] (Port Out 1) ----> ke ----> [Evaluate Policy]
+- [external action] (Port Out 1) ----> ke ----> [Evaluate Policy]
+- [Unit Delay3] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [MATLAB Function1] (Port Out 2) ----> ke ----> [Unit Delay3]
+- [MATLAB Function1] (Port Out 2) ----> ke ----> [MATLAB Function2]
+- [MATLAB Function1] (Port Out 2) ----> ke ----> [MATLAB Function2]
+- [MATLAB Function1] (Port Out 2) ----> ke ----> [Unit Delay3]
+- [Unit Delay5] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [MATLAB Function2] (Port Out 3) ----> ke ----> [To Workspace]
+- [MATLAB Function2] (Port Out 2) ----> ke ----> [Unit Delay4]
+- [Selector] (Port Out 1) ----> ke ----> [Unit Delay5]
+- [slip_factor] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay4] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [pathXY] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Rate Limiter] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Demux] (Port Out 2) ----> ke ----> [out.delta]
+- [Demux] (Port Out 2) ----> ke ----> [Rate Limiter]
+- [Demux] (Port Out 2) ----> ke ----> [Rate Limiter]
+- [Demux] (Port Out 2) ----> ke ----> [out.delta]
+- [Demux] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Demux] (Port Out 1) ----> ke ----> [out.v]
+- [Demux] (Port Out 1) ----> ke ----> [out.v]
+- [Demux] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [RL Agent] (Port Out 1) ----> ke ----> [Demux]
+- [MATLAB Function2] (Port Out 1) ----> ke ----> [RL Agent]
+- [MATLAB Function3] (Port Out 1) ----> ke ----> [RL Agent]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [Selector]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [RL Agent]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [RL Agent]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [RL Agent]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [MATLAB Function1] (Port Out 1) ----> ke ----> [Selector]
+- [Unit Delay2] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay2] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay2] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay2] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [out.y]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [out.y]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [XY Graph]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [XY Graph]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [out.y]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [XY Graph]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [out.y]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay1] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay] (Port Out 1) ----> ke ----> [XY Graph]
+- [Unit Delay] (Port Out 1) ----> ke ----> [out.x]
+- [Unit Delay] (Port Out 1) ----> ke ----> [out.x]
+- [Unit Delay] (Port Out 1) ----> ke ----> [XY Graph]
+- [Unit Delay] (Port Out 1) ----> ke ----> [out.x]
+- [Unit Delay] (Port Out 1) ----> ke ----> [XY Graph]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay] (Port Out 1) ----> ke ----> [out.x]
+- [Unit Delay] (Port Out 1) ----> ke ----> [XY Graph]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function3]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function2]
+- [Unit Delay] (Port Out 1) ----> ke ----> [MATLAB Function1]
+- [MATLAB Function] (Port Out 3) ----> ke ----> [Unit Delay2]
+- [MATLAB Function] (Port Out 2) ----> ke ----> [Unit Delay1]
+- [MATLAB Function] (Port Out 1) ----> ke ----> [Unit Delay]

@@ -1,0 +1,14 @@
+stage=6
+agent=Agen_SAC_v5_stage6.mat
+input_names=input_1
+output_names=fc_mean,std
+v_min=0.200000
+v_max=1.000000
+delta_max_virtual=0.365826
+L_half=0.8600
+W=1.6500
+delta_wheel_max=0.544543
+steer_rate_max=1.0000
+Ts=0.100
+n_ghost=50
+path_spacing=0.100
